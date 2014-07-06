@@ -3,7 +3,7 @@ GRequest
 
 An Generic HTTP Request Library
 
-```javascript
+```Swift
 
 Request("https://api.github.com/repos/lingoer/SwiftyJSON/issues").get{
   response in
