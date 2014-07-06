@@ -53,7 +53,7 @@ class GRequest<D:ResponseDeserialization> {
     return grequest
   }
   
-  func body(body:Dictionary<String, String>) -> GRequest<D>{
+  func formBody(body:Dictionary<String, String>) -> GRequest<D>{
     var urlEncString = ""
     var idx = 0
     for (key, value) in body{
@@ -66,6 +66,13 @@ class GRequest<D:ResponseDeserialization> {
     let request = GRequest<D>(_baseURLString)
     request._body = urlEncString.dataUsingEncoding(NSUTF8StringEncoding)
     request._bodyTypeString = "application/x-www-form-urlencoded"
+    return request
+  }
+  
+  func jsonBody(body:NSDictionary) -> GRequest<D>{
+    let request = GRequest<D>(_baseURLString)
+    request._body = JSONValue(body).rawJSONString.dataUsingEncoding(NSUTF8StringEncoding)
+    request._bodyTypeString = "application/json"
     return request
   }
   
