@@ -10,6 +10,8 @@
 		1738F87C1967ECC0006F5A69 /* GRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1738F87B1967ECC0006F5A69 /* GRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1738F8821967ECC0006F5A69 /* GRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1738F8761967ECC0006F5A69 /* GRequest.framework */; };
 		1738F8891967ECC0006F5A69 /* GRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738F8881967ECC0006F5A69 /* GRequestTests.swift */; };
+		1738F8931967ECEC006F5A69 /* GRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738F8921967ECEC006F5A69 /* GRequest.swift */; };
+		1738F8941967ECEC006F5A69 /* GRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738F8921967ECEC006F5A69 /* GRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,6 +22,41 @@
 			remoteGlobalIDString = 1738F8751967ECC0006F5A69;
 			remoteInfo = GRequest;
 		};
+		1738F89C1967EDAE006F5A69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1738F8951967EDAE006F5A69 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFDB19575BE100351305;
+			remoteInfo = SwiftyJSON;
+		};
+		1738F89E1967EDAE006F5A69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1738F8951967EDAE006F5A69 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFE619575BE100351305;
+			remoteInfo = SwiftyJSONTests;
+		};
+		1738F8A01967EDAE006F5A69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1738F8951967EDAE006F5A69 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FF00219575CE600351305;
+			remoteInfo = "SwiftyJSON-OSX";
+		};
+		1738F8A21967EDAE006F5A69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1738F8951967EDAE006F5A69 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FF00C19575CE600351305;
+			remoteInfo = "SwiftyJSON-OSXTests";
+		};
+		1738F8A41967EDCB006F5A69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1738F8951967EDAE006F5A69 /* SwiftyJSON.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
+			remoteInfo = SwiftyJSON;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +66,8 @@
 		1738F8811967ECC0006F5A69 /* GRequestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GRequestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1738F8871967ECC0006F5A69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1738F8881967ECC0006F5A69 /* GRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRequestTests.swift; sourceTree = "<group>"; };
+		1738F8921967ECEC006F5A69 /* GRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GRequest.swift; sourceTree = "<group>"; };
+		1738F8951967EDAE006F5A69 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +110,8 @@
 		1738F8781967ECC0006F5A69 /* GRequest */ = {
 			isa = PBXGroup;
 			children = (
+				1738F8951967EDAE006F5A69 /* SwiftyJSON.xcodeproj */,
+				1738F8921967ECEC006F5A69 /* GRequest.swift */,
 				1738F87B1967ECC0006F5A69 /* GRequest.h */,
 				1738F8791967ECC0006F5A69 /* Supporting Files */,
 			);
@@ -102,6 +143,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1738F8961967EDAE006F5A69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1738F89D1967EDAE006F5A69 /* SwiftyJSON.framework */,
+				1738F89F1967EDAE006F5A69 /* SwiftyJSONTests.xctest */,
+				1738F8A11967EDAE006F5A69 /* SwiftyJSON.framework */,
+				1738F8A31967EDAE006F5A69 /* SwiftyJSON-OSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -128,6 +180,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1738F8A51967EDCB006F5A69 /* PBXTargetDependency */,
 			);
 			name = GRequest;
 			productName = GRequest;
@@ -180,6 +233,12 @@
 			mainGroup = 1738F86C1967ECC0006F5A69;
 			productRefGroup = 1738F8771967ECC0006F5A69 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1738F8961967EDAE006F5A69 /* Products */;
+					ProjectRef = 1738F8951967EDAE006F5A69 /* SwiftyJSON.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1738F8751967ECC0006F5A69 /* GRequest */,
@@ -187,6 +246,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1738F89D1967EDAE006F5A69 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = 1738F89C1967EDAE006F5A69 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1738F89F1967EDAE006F5A69 /* SwiftyJSONTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftyJSONTests.xctest;
+			remoteRef = 1738F89E1967EDAE006F5A69 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1738F8A11967EDAE006F5A69 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = 1738F8A01967EDAE006F5A69 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1738F8A31967EDAE006F5A69 /* SwiftyJSON-OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON-OSXTests.xctest";
+			remoteRef = 1738F8A21967EDAE006F5A69 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1738F8741967ECC0006F5A69 /* Resources */ = {
@@ -210,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1738F8931967ECEC006F5A69 /* GRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1738F8891967ECC0006F5A69 /* GRequestTests.swift in Sources */,
+				1738F8941967ECEC006F5A69 /* GRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +320,11 @@
 			isa = PBXTargetDependency;
 			target = 1738F8751967ECC0006F5A69 /* GRequest */;
 			targetProxy = 1738F8831967ECC0006F5A69 /* PBXContainerItemProxy */;
+		};
+		1738F8A51967EDCB006F5A69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			targetProxy = 1738F8A41967EDCB006F5A69 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -398,6 +495,7 @@
 				1738F88E1967ECC0006F5A69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1738F88F1967ECC0006F5A69 /* Build configuration list for PBXNativeTarget "GRequestTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +504,7 @@
 				1738F8911967ECC0006F5A69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
