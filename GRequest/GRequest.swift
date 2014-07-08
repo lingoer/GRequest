@@ -37,18 +37,36 @@ class GRequest<D:ResponseDeserialization> {
   
   func path(path: String) -> GRequest<D>{
     let grequest = GRequest<D>(_baseURLString)
+    
+    grequest._header = _header
+    grequest._query = _query
+    grequest._body = _body
+    grequest._bodyTypeString = _bodyTypeString
+    
     grequest._path = path
     return grequest
   }
   
   func query(query: Dictionary<String, String>) -> GRequest<D>{
     let grequest = GRequest<D>(_baseURLString)
+    
+    grequest._path = _path
+    grequest._header = _header
+    grequest._body = _body
+    grequest._bodyTypeString = _bodyTypeString
+
     grequest._query = query
     return grequest
   }
   
   func header(header: Dictionary<String, String>) -> GRequest<D> {
     let grequest = GRequest<D>(_baseURLString)
+    
+    grequest._path = _path
+    grequest._query = _query
+    grequest._body = _body
+    grequest._bodyTypeString = _bodyTypeString
+    
     grequest._header = header
     return grequest
   }
@@ -66,6 +84,11 @@ class GRequest<D:ResponseDeserialization> {
     let request = GRequest<D>(_baseURLString)
     request._body = urlEncString.dataUsingEncoding(NSUTF8StringEncoding)
     request._bodyTypeString = "application/x-www-form-urlencoded"
+    
+    request._path = _path
+    request._header = _header
+    request._query = _query
+    
     return request
   }
   
@@ -73,6 +96,11 @@ class GRequest<D:ResponseDeserialization> {
     let request = GRequest<D>(_baseURLString)
     request._body = JSONValue(body).rawJSONString.dataUsingEncoding(NSUTF8StringEncoding)
     request._bodyTypeString = "application/json"
+   
+    request._path = _path
+    request._header = _header
+    request._query = _query
+    
     return request
   }
   
@@ -80,6 +108,11 @@ class GRequest<D:ResponseDeserialization> {
     let grequest = GRequest<D>(_baseURLString)
     grequest._body = bodyData
     grequest._bodyTypeString = typeString
+    
+    grequest._path = _path
+    grequest._header = _header
+    grequest._query = _query
+    
     return grequest
   }
   
